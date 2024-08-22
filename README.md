@@ -1,0 +1,21 @@
+#ReactN
+#Parcel
+- Dev Build
+- Local Server
+- HMR-> Hote Module Replacement (when we any change in code and save it automatically it will effect on server )
+- File watcing algoritm (c++)
+- Cashing for faster build (.parcel-cash)
+- Image Optimization
+- Minification
+- Campress
+- Banding
+- Consistant Hoshing
+- Code spliting
+- Diffrential bauding - Acording Browser device, older brower
+- Diagnostic (Error show in redable format)
+- Error Handling
+- HTTPs -> we can run our app on HTTPs
+- Tree shaking ->Remove unused code
+- Diffrence develoment & Production bundlers.
+- Brower list
+- Transpilar - transpile the JSX code into React.createElement() using the Bable(bable is js complilar ) 

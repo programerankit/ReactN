@@ -1,0 +1,16 @@
+.card-body{
+    margin-top: 20px;
+}
+.card-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
+.card-div{
+    width: 200px;
+    height: auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(195, 235, 235);
+    cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import { logo } from "../../utils";
 import './header.css';
 export const Hearder=()=>{
+    console.log('hello')
     return(<>
         <div className="header-div">
             <div className="logo-div">

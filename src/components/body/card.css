@@ -14,3 +14,32 @@
     background-color: rgb(195, 235, 235);
     cursor: pointer;
 }
+.search{
+    width: 200px;
+    margin-right: 10px;
+}
+
+.header-div-shimir{
+    background-color: gray;
+    height: 200px;
+    margin-bottom: 10px;
+} 
+ .header-search-shimir{
+    height: 20px;
+ }
+.search-shimir{
+    width: 200px;
+    background-color: gray;
+    margin-right: 10px;
+}
+.card-div-shimir{
+    display: flex;
+    flex-wrap: wrap;
+    gap:30px;
+}
+.card-shimir{
+    background-color: gray;
+    height: 300px;
+    width: 200px;
+    border-radius: 10px;
+}

@@ -1,11 +1,19 @@
 import {recipiData} from '../../utils/recipiData';
-import {Card} from '../../utils/index';
-import { useState } from 'react';
+import {Card, Hearder, ShimirUi} from '../../utils/index';
+import { useEffect, useState } from 'react';
 export const Search=()=>{
-    const [recipiList,setRecipiList]=useState(recipiData)
+    const [recipiList,setRecipiList]=useState([])
     const [inputText,setInputText]=useState('');
     const changeSearch=(e)=>{
-        setInputText(e.target.value);
+        let text=e.target.value;
+        //setInputText(e.target.value);
+        setRecipiList(recipiData.filter(recipiObj=>{
+            if(text!='')
+                return recipiObj.name.toLowerCase().includes(text.toLowerCase())
+            else
+                return recipiObj;
+        }
+    ))
     }
     const fillterCardList=()=>{
         setRecipiList(recipiData.filter(recipiObj=>{
@@ -16,8 +24,26 @@ export const Search=()=>{
         }
     ))
     }
+    const loadData= async ()=>{
+        let res=await fetch("https://dummyjson.com/recipes")
+        let jsonData=await res.json();
+        //here we willuse optional chaining with condition rendring
+        let recipesData=jsonData?.recipes ?jsonData.recipes:[]; 
+        setRecipiList(recipesData)
+    }
+    useEffect(()=>{
+        loadData();
+    },[])
     //console.log(recipiList)
+
+    //here we will use condition rendring for create better User expirence using shimir ui
+    if(recipiData.length==0){
+       return <ShimirUi/>
+    }
+
+
     return(<>
+        <Hearder/>
         <div className='search-div'>
             <input type='text' className='search' onChange={changeSearch}/>
             <button className='searchBtn' onClick={fillterCardList}>Search</button>

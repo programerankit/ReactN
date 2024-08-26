@@ -7,9 +7,8 @@ import { Test } from "./components/Test"
 export const App=()=>{
     return(
         <>
-            <Hearder/>
+            {/* <Hearder/> */}
             <Search/>
-            
         </>
     )
 }

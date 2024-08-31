@@ -22,3 +22,12 @@
     font-size: 18px;
     font-weight: 600;
 }
+.ul-list>a{
+    text-decoration: none;
+}
+.red{
+    color: red !important;
+}
+.white{
+    color: black !important;
+}

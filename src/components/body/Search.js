@@ -1,5 +1,5 @@
 import {recipiData} from '../../utils/recipiData';
-import {Card, Hearder, ShimirUi} from '../../utils/index';
+import {Card, Hearder, ShimirUi,swiggyApi} from '../../utils/index';
 import { useEffect, useState } from 'react';
 export const Search=()=>{
     const [recipiList,setRecipiList]=useState([])
@@ -26,8 +26,14 @@ export const Search=()=>{
     }
     const loadData= async ()=>{
         let res=await fetch("https://dummyjson.com/recipes")
+        // console.log(swiggyApi)
+        // let res=await fetch(swiggyApi,{
+            // method: "post",
+        // })// its live api of swigy
+        console.log(res)
         let jsonData=await res.json();
         //here we willuse optional chaining with condition rendring
+        console.log(jsonData)
         let recipesData=jsonData?.recipes ?jsonData.recipes:[]; 
         setRecipiList(recipesData)
     }
@@ -43,7 +49,7 @@ export const Search=()=>{
 
 
     return(<>
-        <Hearder/>
+        {/* <Hearder/> */}
         <div className='search-div'>
             <input type='text' className='search' onChange={changeSearch}/>
             <button className='searchBtn' onClick={fillterCardList}>Search</button>

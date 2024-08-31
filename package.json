@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "this is reactN",
   "main": "App.js",
+  "proxy":"https://www.swiggy.com/api",
   "scripts": {
-    "start":"parcel index.html",
-    "build":"parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "Ankit Kumar",
@@ -15,7 +16,9 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.1"
   }
 }

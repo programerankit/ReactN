@@ -1,5 +1,5 @@
 import React from 'react';
-class TeamClass extends React.Component{
+export class TeamClass extends React.Component{
     render(){
         return(<>
             <h1>Name: Ankit Kumar</h1>
@@ -7,4 +7,3 @@ class TeamClass extends React.Component{
         </>)
     }
 }
-export default TeamClass;

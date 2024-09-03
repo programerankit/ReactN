@@ -3,7 +3,8 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import { Hearder,Search,Layout,Error,Home,About,Contact } from "./utils"
 import { Test } from "./components/Test"
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter,RouterProvider } from "react-router-dom"
+import { useInternetStatus } from "./utils/Custom hock/useInternetStatus"
 
 const router=createBrowserRouter([
     {
@@ -36,6 +37,9 @@ const router=createBrowserRouter([
 ])
 
 export const App=()=>{
+    // const internetStatus=useInternetStatus();
+    // if(internetStatus==false)
+    //     return(<><h1>Opps!<br/>You are offline<br/>Plese check you Internet Connection</h1></>)
     return(
         <>
             {/* <Hearder/> */}
